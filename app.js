@@ -12,11 +12,12 @@ function check() {
   let reverseArray = splitString.reverse();
   let joinArray = reverseArray.join("");
 
-  if (word.value === joinArray) {
+  if (word.value == joinArray) {
+    console.log(word.value);
     document.getElementById(
       "result"
     ).innerHTML = `yo the word ${word.value} is a palindrome `;
-  } else {
+  } else if (word.value != joinArray) {
     document.getElementById(
       "result"
     ).innerHTML = `yo the word ${word.value} is not a palindrome `;
